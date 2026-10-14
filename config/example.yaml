@@ -1,0 +1,18 @@
+launchpad: pump
+mint: "<PUMP_LAUNCH_MINT_BASE58>"
+
+trigger:
+  type: on_migration
+  # type: price_rule
+  # price_rule:
+  #   kind: dip_pct_from_high
+  #   value: 10
+
+execution:
+  offset_above_spot_bps: 50
+  # Narrow band above min sqrt (not protocol max) — required for large single-sided deposits (e.g. 5% of supply).
+  max_sqrt_above_min_bps: 2000
+  launch_token_sizing:
+    mode: percent_of_wallet
+    percent: 5
+  damm_config: "<DAMM_FEE_CONFIG_PUBKEY>"

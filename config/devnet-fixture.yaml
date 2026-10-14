@@ -1,0 +1,11 @@
+launchpad: pump
+mint: DG61jXcEb5UeXciycvTQR7gxpyJnVCH36PuovsmVdM7n
+trigger:
+  type: on_migration
+execution:
+  offset_above_spot_bps: 50
+  max_sqrt_above_min_bps: 2000
+  launch_token_sizing:
+    mode: percent_of_wallet
+    percent: 5
+  damm_config: 8CNy9goNQNLM4wtgRw528tUQGMKD3vSuFRZY2gLGLLvF
